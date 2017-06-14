@@ -1,0 +1,203 @@
+CREATE TABLE Customer (
+Customer_ID   numeric(10)   Not Null, 
+name		  varchar(20)   Not Null,
+street        varchar(20)   Not Null, 
+city          varchar(20)   Not Null, 
+state         varchar(20)   Not Null,
+zip		      varchar(8),
+
+CONSTRAINT Customer_PK
+       PRIMARY KEY (Customer_ID)
+);
+
+CREATE TABLE Orders (
+Order_ID      numeric(10) Not Null, 
+Quantity      numeric(10) Not Null, 
+Customer_ID   numeric(10) Not Null, 
+
+CONSTRAINT Orders_PK
+       PRIMARY KEY (Order_ID),
+CONSTRAINT Orders_FK 
+       FOREIGN KEY (Customer_ID) 
+           REFERENCES Customer(Customer_ID)
+
+);
+
+CREATE TABLE Car (
+Car_ID     numeric(10) Not Null, 
+Brand      varchar(20) Not Null, 
+Color      varchar(10) Not Null, 
+Model	   varchar(20) Not Null,
+Order_ID   numeric(10) Not Null, 
+
+CONSTRAINT Car_PK
+       PRIMARY KEY (Car_ID),
+CONSTRAINT Car_FK 
+       FOREIGN KEY (Order_ID) 
+           REFERENCES Orders(Order_ID)
+
+);
+
+CREATE TABLE Part (
+Part_ID          numeric(10) Not Null, 
+Location         varchar(20) Not Null, 
+Qty_on_hand      numeric(10) Not Null, 
+Car_ID           numeric(10) Not Null, 
+
+CONSTRAINT Part_PK
+       PRIMARY KEY (Part_ID),
+CONSTRAINT Part_FK 
+       FOREIGN KEY (Car_ID) 
+           REFERENCES Car(Car_ID)
+
+);
+
+CREATE TABLE Internal (
+PartID_Internal         numeric(10) Not Null, 
+Engine_Internal         varchar(20) Not Null, 
+Turbo     				varchar(20) Not Null, 
+Gear          			varchar(20) Not Null, 
+Screw    				varchar(20) Not Null,
+
+CONSTRAINT Internal_PK
+       PRIMARY KEY (PartID_Internal)
+);
+
+CREATE TABLE External (
+PartID_External         numeric(10) Not Null, 
+Frame			        varchar(20) Not Null, 
+Wheel    				varchar(20) Not Null, 
+Paint         			varchar(20) Not Null, 
+
+CONSTRAINT External_PK
+       PRIMARY KEY (PartID_External)
+);
+
+CREATE TABLE Supplier (
+Supplier_ID             numeric(10) Not Null, 
+Department		        varchar(20) Not Null, 
+Part_ID   				numeric(10) Not Null, 
+
+CONSTRAINT Supplier_PK
+       PRIMARY KEY (Supplier_ID),
+CONSTRAINT Supplier_FK 
+       FOREIGN KEY (Part_ID) 
+           REFERENCES Part(Part_ID)
+);
+
+CREATE TABLE Car_Part (
+Car_ID              numeric(10) Not Null, 
+Part_ID	        	numeric(20) Not Null, 
+Qty   				numeric(10) Not Null, 
+
+CONSTRAINT Car_Part_FK1 
+       FOREIGN KEY (Car_ID) 
+           REFERENCES Car(Car_ID),
+CONSTRAINT Car_Part_FK2
+       FOREIGN KEY (Part_ID) 
+           REFERENCES Part(Part_ID)
+);
+
+
+
+/////
+
+CREATE TABLE Customer (
+Customer_ID   numeric(10)   Not Null, 
+name		  varchar(20)   Not Null,
+street        varchar(20)   Not Null, 
+city          varchar(20)   Not Null, 
+state         varchar(20)   Not Null,
+zip		      numeric(8),
+
+CONSTRAINT Customer_PK
+       PRIMARY KEY (Customer_ID)
+);
+
+CREATE TABLE Orders (
+Order_ID      numeric(10) Not Null, 
+Quantity      numeric(10) Not Null, 
+Customer_ID   numeric(10) Not Null, 
+
+CONSTRAINT Orders_PK
+       PRIMARY KEY (Order_ID),
+CONSTRAINT Orders_FK 
+       FOREIGN KEY (Customer_ID) 
+           REFERENCES Customer(Customer_ID)
+
+);
+
+CREATE TABLE Car (
+Car_ID     numeric(10) Not Null, 
+Brand      varchar(20) Not Null, 
+Color      varchar(20) Not Null, 
+Model	   varchar(20) Not Null,
+Order_ID   numeric(10) Not Null, 
+
+CONSTRAINT Car_PK
+       PRIMARY KEY (Car_ID),
+CONSTRAINT Car_FK 
+       FOREIGN KEY (Order_ID) 
+           REFERENCES Orders(Order_ID)
+
+);
+
+CREATE TABLE Part (
+Part_ID          varchar(20) Not Null, 
+Location         varchar(20) Not Null, 
+Qty_on_hand      numeric(10) Not Null, 
+Car_ID           numeric(10) Not Null, 
+
+CONSTRAINT Part_PK
+       PRIMARY KEY (Part_ID),
+CONSTRAINT Part_FK 
+       FOREIGN KEY (Car_ID) 
+           REFERENCES Car(Car_ID)
+
+);
+
+CREATE TABLE Internal (
+PartID_Internal         varchar(20) Not Null, 
+Engine_Internal         varchar(20) Not Null, 
+Turbo     				varchar(20) Not Null, 
+Gear          			varchar(20) Not Null, 
+Screw    				varchar(20) Not Null,
+
+CONSTRAINT Internal_PK
+       PRIMARY KEY (PartID_Internal)
+);
+
+CREATE TABLE External (
+PartID_External         varchar(20) Not Null, 
+Frame			        varchar(20) Not Null, 
+Wheel    				varchar(20) Not Null, 
+Paint         			varchar(20) Not Null, 
+
+CONSTRAINT External_PK
+       PRIMARY KEY (PartID_External)
+);
+
+CREATE TABLE Supplier (
+Supplier_ID             numeric(10) Not Null, 
+Department		        varchar(20) Not Null, 
+Part_ID   				varchar(20) Not Null, 
+
+CONSTRAINT Supplier_PK
+       PRIMARY KEY (Supplier_ID),
+CONSTRAINT Supplier_FK 
+       FOREIGN KEY (Part_ID) 
+           REFERENCES Part(Part_ID)
+);
+
+CREATE TABLE Car_Part (
+Car_ID              numeric(10) Not Null, 
+Part_ID	        	varchar(20) Not Null, 
+Qty   				numeric(10) Not Null, 
+
+CONSTRAINT Car_Part_FK1 
+       FOREIGN KEY (Car_ID) 
+           REFERENCES Car(Car_ID),
+CONSTRAINT Car_Part_FK2
+       FOREIGN KEY (Part_ID) 
+           REFERENCES Part(Part_ID)
+);

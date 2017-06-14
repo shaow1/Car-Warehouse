@@ -1,0 +1,67 @@
+Final_query
+1.
+Select Quantity
+From orders
+where Quantity >=7000;
+
+2.
+Select *
+From customer
+where city= 'Boston'or city='Portsmouth';
+
+3.
+SELECT  *
+FROM Car_Part
+WHERE Qty between 200 and 800;
+
+4.
+SELECT Engine_internal, Turbo, Gear, Screw
+FROM internal
+WHERE Engine_internal IN ('V Type', 'Boxer');
+
+5.
+SELECT Part_ID, Location, Qty_on_hand
+FROM part
+ORDER BY Qty_on_hand asc;
+
+6
+SELECT order_id,brand,color,model
+FROM car
+WHERE order_id in
+(SELECT order_id
+FROM orders
+WHERE quantity = '10000')
+
+7
+SELECT  name,SUM(quantity) AS sum
+	FROM orders o,customer c
+	WHERE c.customer_id=o.customer_id and o.customer_id= '003'
+
+8
+SELECT c.car_ID, c.order_ID,COUNT(*) AS count 
+FROM orders o, Car c 
+WHERE o.order_ID = c.order_ID 
+GROUP BY c.order_ID, c.car_id 
+ORDER BY c.order_ID, c.car_ID 
+
+9.
+SELECT c.Customer_ID, name, Street,state
+FROM Customer c, orders o
+WHERE c.Customer_ID = o.Customer_ID;
+
+10.
+SELECT s.Part_ID, Location, Qty_on_hand, Department,Supplier_ID
+FROM Part p, Supplier s
+WHERE p.Part_ID = s.Part_ID;
+
+11.
+SELECT Car_ID,Brand, color,Car_ID,Quantity,o.order_ID
+FROM orders o, car c
+WHERE o.order_ID = c.order_ID;
+
+12.
+SELECT e.PartID_External, Frame, Wheel, Paint, Location,Qty_on_hand 
+FROM External e, Part p 
+WHERE e.PartID_External = PartID_External 
+ORDER BY e.PartID_External, Qty_on_hand, Location
+

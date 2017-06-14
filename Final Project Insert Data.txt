@@ -1,0 +1,137 @@
+INSERT INTO Customer VALUES ('001','Henry','14 Palace Rd','Boston','MA','02115');
+INSERT INTO Customer VALUES ('002','Greg','Waverly St','Framingham','MA','01702');
+INSERT INTO Customer VALUES ('003','Joe','Cumberland Ave','Portland','ME','04101');
+INSERT INTO Customer VALUES ('004','John','550 Huntington Ave','Boston','MA','02115');
+INSERT INTO Customer VALUES ('005','Alice','30 Morton St','Forest Hills','NY','11375');
+INSERT INTO Customer Values ('007','Peter','42 South St','Portsmouth','NH','23701');
+INSERT INTO Customer Values ('010','Joseph','11 Tetlow St','Boston','MA','02115');
+INSERT INTO Customer Values ('008','Kevin','550 Huntington Ave','Boston','MA','02115');
+INSERT INTO Customer Values ('009','James','28 lincoln Ave','Portsmouth','NH','23701');
+INSERT INTO Customer Values ('011','Thomas','240 Main St','Dover-Foxcroft','ME','04426');
+INSERT INTO Customer Values ('015','Ben','97 Summer St','Dexter','ME','04930');
+INSERT INTO Customer Values ('014','Mark','21 Jane St','New York City','NY','10014');
+INSERT INTO Customer Values ('017','Barry','15 Forest St','Worcester','MA','01603');
+INSERT INTO Customer Values ('018','Frank','101 Worcester Rd','Framingham','MA','01702');
+INSERT INTO Customer Values ('012','Kate','300 Oliver St','Newark','NJ','07105');
+
+INSERT INTO  Orders VALUES ('01','1000','003');
+INSERT INTO  Orders VALUES ('02','10000','003');
+INSERT INTO  Orders VALUES ('03','5000','004');
+INSERT INTO  Orders VALUES ('04','30200','001');
+INSERT INTO  Orders VALUES ('05','1000','004');
+INSERT INTO  Orders VALUES ('09','27000','011');
+INSERT INTO  Orders VALUES ('11','6000','001');
+INSERT INTO  Orders VALUES ('14','8500','005');
+INSERT INTO  Orders VALUES ('21','10000','007');
+INSERT INTO  Orders VALUES ('51','34000','011');
+INSERT INTO  Orders VALUES ('15','2300','015');
+INSERT INTO  Orders VALUES ('16','800','009');
+INSERT INTO  Orders VALUES ('23','6500','007');
+INSERT INTO  Orders VALUES ('31','150000','004');
+INSERT INTO  Orders VALUES ('06','6200','015');
+
+
+INSERT INTO  Car VALUES ('123','chevy','grey','camaro','01');
+INSERT INTO  Car VALUES ('231','toyota','red','camry','03');
+INSERT INTO  Car VALUES ('132','nissan','blue','gtr','02');
+INSERT INTO  Car VALUES ('213','ford','green','focus','04');
+INSERT INTO  Car VALUES ('312','audi','black','A8','05');
+INSERT INTO  Car VALUES ('321','bmw','black','M5','09');
+INSERT INTO  Car VALUES ('134','mercedes','grey','cla','06');
+INSERT INTO  Car VALUES ('143','mercedes','grey','E-350','04');
+INSERT INTO  Car VALUES ('314','chevy','red','volt','14');
+INSERT INTO  Car VALUES ('341','lexus','white','Rx350','51');
+INSERT INTO  Car VALUES ('431','Acura','white','mdx','11');
+INSERT INTO  Car VALUES ('413','chevy','green','cruze','14');
+INSERT INTO  Car VALUES ('234','audi','blue','A4','21');
+INSERT INTO  Car VALUES ('432','lotus','grey','elise','03');
+INSERT INTO  Car VALUES ('342','jeep','grey','cherokee','04');
+
+INSERT INTO  Car_Part VALUES ('132','B3','200');
+INSERT INTO  Car_Part VALUES ('231','C8','300');
+INSERT INTO  Car_Part VALUES ('123','A3','555');
+INSERT INTO  Car_Part VALUES ('312','D1','333');
+INSERT INTO  Car_Part VALUES ('213','E2','222');
+INSERT INTO  Car_Part VALUES ('321','B1','1000');
+INSERT INTO  Car_Part VALUES ('234','C8','850');
+INSERT INTO  Car_Part VALUES ('143','C7','410');
+INSERT INTO  Car_Part VALUES ('432','B4','95');
+INSERT INTO  Car_Part VALUES ('314','B5','75');
+INSERT INTO  Car_Part VALUES ('341','C8','150');
+INSERT INTO  Car_Part VALUES ('143','A3','50');
+INSERT INTO  Car_Part VALUES ('234','D2','860');
+INSERT INTO  Car_Part VALUES ('143','C8','720');
+INSERT INTO  Car_Part VALUES ('234','E2','610');
+
+INSERT INTO  Part VALUES ('E5','US','5800','123');
+INSERT INTO  Part VALUES ('C6','China','3400','231');
+INSERT INTO  Part VALUES ('D2','UK','12000','132');
+INSERT INTO  Part VALUES ('A4','AU','14000','213');
+INSERT INTO  Part VALUES ('C9','Russia','6000','123');
+INSERT INTO  Part VALUES ('B5','Russia','8700','413');
+INSERT INTO  Part VALUES ('B4','Canada','1000','134');
+INSERT INTO  Part VALUES ('C7','India','520','143');
+INSERT INTO  Part VALUES ('C8','Korea','13200','413');
+INSERT INTO  Part VALUES ('B1','Japan','101000','314');
+INSERT INTO  Part VALUES ('E2','China','810','413');
+INSERT INTO  Part VALUES ('D1','UK','27800','431');
+INSERT INTO  Part VALUES ('A3','China','76000','431');
+INSERT INTO  Part VALUES ('C5','AU','67000','123');
+INSERT INTO  Part VALUES ('B3','UK','1500','231');
+
+INSERT INTO  Internal VALUES ('B3','V Type','Twin-turbo','CVT','Self Drilling');
+INSERT INTO  Internal VALUES ('A3','V Type','Twin-scroll','Automanual','Machine');
+INSERT INTO  Internal VALUES ('C5','Boxer','Free floating','Automatic','Flange');
+INSERT INTO  Internal VALUES ('D1','Wankel','Anti-surge','Manual','Socket');
+INSERT INTO  Internal VALUES ('E2','Diesel','Twin-turbo','Manual','Hex Bolts');
+INSERT INTO  Internal VALUES ('B1','V Type','Anti-surge','Automanual','Self Drilling');
+INSERT INTO  Internal VALUES ('C8','Wankel','Twin-scroll','Automatic','Hex Bolts');
+INSERT INTO  Internal VALUES ('C7','Wankel','Twin-turbo','Automatic','Flange');
+INSERT INTO  Internal VALUES ('B4','Boxer','Twin-scroll','Manual','Flange');
+INSERT INTO  Internal VALUES ('B5','Diesel','Anti-surge','CVT','Hex Bolts');
+INSERT INTO  Internal VALUES ('A4','V Type','Twin-turbo','Manual','Self Drilling');
+INSERT INTO  Internal VALUES ('C9','Diesel','Free floating','Manual','Machine');
+INSERT INTO  Internal VALUES ('D2','Boxer','Free floating','Manual','Machine');
+INSERT INTO  Internal VALUES ('C6','Wankel','Anti-surge','CVT','Socket');
+INSERT INTO  Internal VALUES ('E5','V Type','Anti-surge','Automatic','Socket');
+
+
+INSERT INTO  External VALUES ('D1','X-Frame','Aluminum','red');
+INSERT INTO  External VALUES ('E2','Perimeter','Alloy','blue');
+INSERT INTO  External VALUES ('B1','Backbone tube','Custom','green');
+INSERT INTO  External VALUES ('C8','Ladder','Steel','black');
+INSERT INTO  External VALUES ('C7','Unibody','Custom','grey');
+INSERT INTO  External VALUES ('B4','X-Frame','Alloy','white');
+INSERT INTO  External VALUES ('B5','Backbone tube','Steel','red');
+INSERT INTO  External VALUES ('A4','Perimeter','Aluminum','red');
+INSERT INTO  External VALUES ('C9','Backbone tube','Alloy','green');
+INSERT INTO  External VALUES ('D2','X-Frame','Steel','black');
+INSERT INTO  External VALUES ('C6','Ladder','Aluminum','grey');
+INSERT INTO  External VALUES ('E5','Perimeter','Aluminum','blue');
+INSERT INTO  External VALUES ('A3','Ladder','Custom','green');
+INSERT INTO  External VALUES ('C5','Ladder','Custom','green');
+INSERT INTO  External VALUES ('B3','Unibody','Alloy','red');
+
+
+INSERT INTO  Supplier VALUES ('1234','Product','B3');
+INSERT INTO  Supplier VALUES ('2341','Functional','A3');
+INSERT INTO  Supplier VALUES ('3412','Customer','C5');
+INSERT INTO  Supplier VALUES ('4123','Process','B3');
+INSERT INTO  Supplier VALUES ('4321','Divisional','E5');
+INSERT INTO  Supplier VALUES ('5121','Product','C9');
+INSERT INTO  Supplier VALUES ('9325','Functional','D2');
+INSERT INTO  Supplier VALUES ('2342','Process','E5');
+INSERT INTO  Supplier VALUES ('8713','Product','E5');
+INSERT INTO  Supplier VALUES ('3513','Customer','B1');
+INSERT INTO  Supplier VALUES ('5111','Divisional','A3');
+INSERT INTO  Supplier VALUES ('3422','Process','C8');
+INSERT INTO  Supplier VALUES ('3442','Functional','C6');
+INSERT INTO  Supplier VALUES ('7654','Functional','C6');
+INSERT INTO  Supplier VALUES ('4133','Customer','B3');
+
+
+
+
+
+
+
